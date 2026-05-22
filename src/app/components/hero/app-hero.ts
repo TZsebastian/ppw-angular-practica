@@ -1,34 +1,43 @@
-import { Component, computed, signal } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { UpperCasePipe } from '@angular/common';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
-  selector: 'app-hero',
+  selector: 'app-header',
   standalone: true,
-  imports: [UpperCasePipe],
+  imports: [
+    RouterLink,
+    RouterLinkActive,
+    UpperCasePipe
+  ],
   templateUrl: './app-hero.html',
-  styleUrl: './app-hero.css',
+  styleUrl: './app-hero.css'
 })
-export class AppHeroComponent {
-  readonly title = signal('Componentes Standalone Reutilizables');
+export class AppHeaderComponent {
+
+  readonly brand = signal('PPW Angular');
+
+  readonly title = signal('Angular');
+
+  readonly subtitle = signal('Curso de Angular');
+
+  readonly viewMode = signal('list');
 
   readonly topics = signal([
-    'signals',
-    'computed',
-    '@if',
-    '@for',
-    '@switch',
-    'pipes',
+    'Components',
+    'Signals',
+    'Routing',
+    'Forms'
   ]);
 
-  readonly subtitle = computed(
-    () => `Temas activos: ${this.topics().length}`
-  );
+  toggleMode() {
 
-  readonly viewMode = signal<'lista' | 'resumen'>('lista');
-
-  toggleMode(): void {
-    this.viewMode.update((m) =>
-      m === 'lista' ? 'resumen' : 'lista'
+    this.viewMode.set(
+      this.viewMode() === 'list'
+        ? 'grid'
+        : 'list'
     );
+
   }
+
 }

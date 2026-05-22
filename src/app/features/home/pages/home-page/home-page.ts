@@ -1,21 +1,16 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { AppHeroComponent } from '../../../../components/hero/app-hero';
+import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home-page',
-  standalone: true,
-  imports: [AppHeroComponent],
+  imports: [],
   templateUrl: './home-page.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  styleUrl: './home-page.css'
 })
 export class HomePage {
+  private router = inject(Router);
 
-constructor(private router: Router) {}
-
-  goToStudentsPage(){
+  goToStudentsPage(): void {
     this.router.navigate(['/students']);
-
   }
-  
 }

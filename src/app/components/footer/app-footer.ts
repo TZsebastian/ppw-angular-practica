@@ -1,30 +1,15 @@
-import { Component } from '@angular/core';
-
-import {
-  UpperCasePipe,
-  LowerCasePipe,
-  TitleCasePipe,
-  DatePipe,
-  CurrencyPipe,
-} from '@angular/common';
+import { Component, signal } from '@angular/core';
+import { UpperCasePipe, LowerCasePipe, DecimalPipe } from '@angular/common';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [
-    UpperCasePipe,
-    LowerCasePipe,
-    TitleCasePipe,
-    DatePipe,
-    CurrencyPipe,
-  ],
-  templateUrl: './app-footer.html',
-  styleUrl: './app-footer.css',
+  imports: [UpperCasePipe, LowerCasePipe, DecimalPipe],
+templateUrl: './app-footer.html',
+styleUrl: './app-footer.css'
 })
-export class AppFooterComponent {
-    miNombre = 'Programacion Plataformas Web'
-  nombre = 'sebastian zurita';
-  universidad = 'UNIVERSIDAD POLITECNICA SALESIANA';
-  fecha = new Date();
-  precio = 1500;
+export class Footer {
+  anio = signal(2026);
+
+  mensaje = signal('programacion web');
 }
