@@ -4,7 +4,7 @@ import { Component, input } from '@angular/core';
   selector: 'app-gradient-cta-banner',
   standalone: true,
   template: `
-    <section class="gradient-surface rounded-3xl p-6 shadow-xl bg-gradient-to-br from-sky-500 via-cyan-400 to-indigo-500 text-white">
+    <section [class]="'gradient-surface rounded-3xl p-6 shadow-xl text-white ' + colorClass()">
       <p class="text-xs font-bold uppercase tracking-[0.3em] text-white/90">{{ eyebrow() }}</p>
       <h3 class="mt-2 text-2xl font-black tracking-tight">{{ title() }}</h3>
       <p class="mt-2 max-w-xl text-sm text-white/90">{{ description() }}</p>
@@ -19,4 +19,7 @@ export class GradientCtaBanner {
   title = input.required<string>();
   description = input.required<string>();
   actionLabel = input<string>('Ver mas');
+
+  // NUEVO INPUT: Por defecto mantendrá el azul, pero lo puedes cambiar cuando quieras
+  colorClass = input<string>('bg-gradient-to-br from-sky-500 via-cyan-400 to-indigo-500');
 }

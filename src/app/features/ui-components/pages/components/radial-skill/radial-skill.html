@@ -1,0 +1,6 @@
+<div class="flex flex-col items-center bg-base-100 p-4 rounded-2xl border border-base-200 shadow-sm">
+  <div class="radial-progress" [style.--value]="value()" [style.--size]="'5rem'" [class]="colorClass()" role="progressbar">
+    {{ value() }}%
+  </div>
+  <span class="mt-2 text-sm font-semibold text-slate-700">{{ name() }}</span>
+</div>
