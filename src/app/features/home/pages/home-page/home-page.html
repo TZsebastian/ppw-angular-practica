@@ -1,54 +1,70 @@
-<section class="min-h-[75vh] flex flex-col items-center justify-center text-center p-6 space-y-8">
-  
-  <div class="relative space-y-3 z-10 max-w-3xl">
-    <div class="absolute -inset-10 rounded-full bg-sky-500/5 blur-3xl pointer-events-none"></div>
+<section class="min-h-[85vh] flex items-center">
 
-    <p class="text-xs font-bold uppercase tracking-[0.3em] text-primary">
-      Plataforma de Desarrollo Web
-    </p>
-    
-    <h1 class="text-4xl font-black tracking-tight text-base-content md:text-5xl lg:text-6xl">
-      Bienvenido a mi Entorno de Prácticas
-    </h1>
-    
-    <p class="text-sm md:text-base leading-relaxed text-base-content/75 max-w-2xl mx-auto pt-2">
-      Espacio de trabajo modularizado construido con Angular 21, TailwindCSS y DaisyUI. 
-      Diseñado para la validación de componentes interactivos, maquetación responsive y gestión de laboratorios técnicos.
-    </p>
-  </div>
+  <div class="grid lg:grid-cols-2 gap-12 items-center w-full">
 
-  <div class="card bg-base-100 border border-base-200 shadow-sm w-full max-w-2xl p-6 rounded-3xl">
-    <h2 class="text-xs font-bold uppercase tracking-wider text-base-content/50 mb-4 text-center">
-      Módulos Disponibles de la Aplicación
-    </h2>
-    
-    <div class="grid gap-3 sm:grid-cols-2">
-      <a 
-        routerLink="/ui-components" 
-        class="flex items-center justify-between p-4 bg-base-200/50 hover:bg-base-200 rounded-2xl border border-base-300/30 transition-all group"
-      >
-        <div class="text-left">
-          <p class="text-sm font-bold text-base-content group-hover:text-primary transition-colors">Catálogo UI</p>
-          <p class="text-xs text-base-content/60">Componentes glass y gradient</p>
-        </div>
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-base-content/40 group-hover:text-primary transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-        </svg>
-      </a>
+    <!-- TEXTO -->
+    <div class="space-y-6">
 
-      <a 
-        routerLink="/students" 
-        class="flex items-center justify-between p-4 bg-base-200/50 hover:bg-base-200 rounded-2xl border border-base-300/30 transition-all group"
-      >
-        <div class="text-left">
-          <p class="text-sm font-bold text-base-content group-hover:text-primary transition-colors">Estudiantes</p>
-          <p class="text-xs text-base-content/60">Administración de registros</p>
-        </div>
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-base-content/40 group-hover:text-primary transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-        </svg>
-      </a>
+      <div class="space-y-3">
+        <p class="text-sm font-bold uppercase tracking-[0.3em] text-sky-700">
+          Estudiante de Ciencias de la Computación
+        </p>
+
+        <h1 class="text-5xl lg:text-7xl font-black tracking-tight text-slate-900">
+          SEBASTIÁN ZURITA
+        </h1>
+
+        <h2 class="text-2xl lg:text-3xl font-semibold text-slate-600">
+          Universidad Politécnica Salesiana
+        </h2>
+      </div>
+
+      <p class="max-w-2xl text-lg leading-8 text-slate-600">
+        Apasionado por el desarrollo web, la programación y la creación de
+        interfaces modernas con Angular, TailwindCSS y DaisyUI.
+        Me enfoco en construir aplicaciones dinámicas, limpias y responsivas
+        orientadas a una excelente experiencia de usuario.
+      </p>
+
+      <!-- BOTONES -->
+      <div class="flex flex-wrap gap-4 pt-2">
+
+        <button class="btn btn-primary btn-lg">
+          Ver Proyectos
+        </button>
+
+        <button class="btn btn-outline btn-info btn-lg">
+          Contactarme
+        </button>
+
+      </div>
+
     </div>
+
+    <!-- IMAGEN -->
+    <div class="flex justify-center">
+
+      <div class="relative">
+
+        <!-- EFECTO -->
+        <div class="absolute inset-0 bg-sky-300/20 blur-3xl rounded-full scale-110"></div>
+
+        <!-- CONTENEDOR -->
+        <div class="relative w-72 h-72 lg:w-[420px] lg:h-[420px] rounded-full overflow-hidden border-4 border-white shadow-2xl bg-base-100">
+
+          <!-- IMAGEN -->
+          <img
+            src="https://ditecnomakers.com/statics/CienciasComputacion-ec937566.jpeg"
+            alt="Profile"
+            class="w-full h-full object-cover"
+          />
+
+        </div>
+
+      </div>
+
+    </div>
+
   </div>
 
 </section>

@@ -5,9 +5,11 @@ import { StudentPage } from './features/students/pages/student-page/student-page
 import { StudentDetailPage } from './features/students/pages/student-detail-page/student-detail-page';
 import { LayoutsPage } from './features/layouts/pages/layouts-page';
 import { SingupPage } from './features/singup-page/singup-page';
-
 import ProfilePage from './features/profile/pages/profile-page';
 import ProjectConfigPage from './features/profile/pages/project-config-page';
+import { SimpsonsPage } from './features/simpsons/pages/simpsons-page/simpsons-page';
+import { SimpsonDetailPage } from './features/simpsons/pages/simpsons-detail-page/simpsons-detail-page';
+
 
 export const routes: Routes = [
 
@@ -32,6 +34,11 @@ export const routes: Routes = [
   },
 
   {
+  path: 'simpsons',
+  component: SimpsonsPage,
+},
+
+  {
     path: 'students/:id',
     component: StudentDetailPage,
   },
@@ -47,6 +54,11 @@ export const routes: Routes = [
     path: 'signup',
     component: SingupPage,
   },
+
+{
+  path: 'simpsons/:id',
+  component: SimpsonDetailPage,
+},
 
   {
     path: 'profile',

@@ -8,14 +8,14 @@
 
 ---
 
-## 🚀 Descripción del Proyecto
+##  Descripción del Proyecto
 Este repositorio contiene el avance incremental de los laboratorios prácticos de Angular 21. La aplicación ha migrado de una arquitectura estática local hacia una **Single Page Application (SPA)** completamente navegable, reactiva mediante el uso de **Signals**, y estilizada de manera responsiva utilizando las utilidades nativas de **Tailwind CSS v4** junto con el sistema de componentes semánticos de **DaisyUI**.
 
 El proyecto sigue una estructura limpia orientada a componentes *standalone* organizados por carpetas de *features* de negocio y elementos UI puros.
 
 ---
 
-## 🛠️ Resumen Técnico de Prácticas Implementadas
+##  Resumen Técnico de Prácticas Implementadas
 
 ### Modulo 02: Fundamentos de Angular
 * Creación e integración de componentes standalone reutilizables (`AppHeaderComponent` y `AppHeroComponent`).
@@ -41,9 +41,8 @@ El proyecto sigue una estructura limpia orientada a componentes *standalone* org
 
 ---
 
-## 📸 Evidencias Visuales del Sistema (Capturas de Pantalla)
+##  Evidencias Visuales del Sistema (Capturas de Pantalla)
 
-> **Nota para la calificación:** Para visualizar correctamente las imágenes en este documento, guarde sus capturas en formato `.png` dentro de una carpeta llamada `capturas` en la raíz del proyecto, nombrándolas exactamente como se indica en cada apartado.
 
 ### 1. Pantalla de Inicio (HomePage)
 Muestra el componente Hero unificado, el contenedor centrado responsivo y los dos botones de acción configurados en paralelo (un botón con estilos CSS heredados y otro nativo de Tailwind).
@@ -91,7 +90,7 @@ Evidencia de la implementación de 5 componentes visuales extra (Avatar, Accordi
 
 ---
 
-## 📐 Detalles Técnicos de Layouts y Componentes UI
+##  Detalles Técnicos de Layouts y Componentes UI
 
 | Elemento / Distribución | Clases Principales / Implementación | Propósito del Diseño |
 | :--- | :--- | :--- |
@@ -104,7 +103,7 @@ Evidencia de la implementación de 5 componentes visuales extra (Avatar, Accordi
 
 ---
 
-## ⚙️ Instrucciones de Despliegue Local
+## Instrucciones de Despliegue Local
 
 Para levantar este proyecto en su entorno local, asegúrese de contar con Node.js y el gestor de paquetes `pnpm` instalado. Ejecute las siguientes líneas en su terminal:
 
