@@ -128,7 +128,34 @@
       </ul>
     </div>
 
-    <div class="navbar-end"></div>
+    <!-- AUTH SECTION -->
+    <div class="navbar-end gap-2">
+
+      @if (currentUser()) {
+
+        <span class="hidden text-sm text-base-content/60 lg:block">
+          {{ currentUser()!.email }}
+        </span>
+
+        <button
+          class="btn btn-ghost btn-sm"
+          (click)="logout()"
+        >
+          Cerrar sesión
+        </button>
+
+      } @else {
+
+        <a
+          class="btn btn-primary btn-sm"
+          routerLink="/auth"
+        >
+          Iniciar sesión
+        </a>
+
+      }
+
+    </div>
 
   </div>
 </header>

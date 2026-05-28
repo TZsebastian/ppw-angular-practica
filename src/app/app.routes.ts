@@ -9,6 +9,7 @@ import ProfilePage from './features/profile/pages/profile-page';
 import ProjectConfigPage from './features/profile/pages/project-config-page';
 import { SimpsonsPage } from './features/simpsons/pages/simpsons-page/simpsons-page';
 import { SimpsonDetailPage } from './features/simpsons/pages/simpsons-detail-page/simpsons-detail-page';
+import { AuthPageComponent } from './features/auth/pages/auth-page/auth-page';
 
 
 export const routes: Routes = [
@@ -69,6 +70,11 @@ export const routes: Routes = [
     path: 'project-config',
     component: ProjectConfigPage,
   },
+
+  {
+  path: 'auth',
+  component: AuthPageComponent
+},
 
   // REDIRECT
   {

@@ -1,21 +1,34 @@
 <section class="mx-auto max-w-4xl space-y-6">
-  <a routerLink="/simpsons" class="btn btn-ghost btn-sm hover:bg-pink-800 hover:text-slate-50">← Volver al listado</a>
+
+  <a
+    routerLink="/simpsons"
+    class="btn btn-ghost btn-sm hover:bg-pink-800 hover:text-slate-50"
+  >
+    ← Volver al listado
+  </a>
 
   @if (characterResource.isLoading()) {
+
     <div class="flex h-56 items-center justify-center">
       <span class="loading loading-spinner loading-lg text-primary"></span>
     </div>
+
   }
 
   @if (characterResource.error()) {
+
     <div class="alert alert-error">
       <span>No se pudo cargar el personaje.</span>
     </div>
+
   }
 
   @if (characterResource.hasValue()) {
+
     <article class="card border border-base-300 bg-base-100 shadow-sm">
+
       <div class="card-body gap-6 md:flex-row">
+
         <div class="mx-auto md:mx-0">
           <img
             [src]="'https://cdn.thesimpsonsapi.com/500' + characterResource.value()!.portrait_path"
@@ -25,6 +38,7 @@
         </div>
 
         <div class="space-y-3">
+
           <h2 class="text-3xl font-black tracking-tight">
             {{ characterResource.value()!.name }}
           </h2>
@@ -48,12 +62,51 @@
             class="badge badge-lg"
             [class.badge-success]="characterResource.value()!.status === 'Alive'"
             [class.badge-error]="characterResource.value()!.status === 'Deceased'"
-            [class.badge-warning]="characterResource.value()!.status !== 'Alive' && characterResource.value()!.status !== 'Deceased'"
+            [class.badge-warning]="
+              characterResource.value()!.status !== 'Alive' &&
+              characterResource.value()!.status !== 'Deceased'
+            "
           >
             {{ characterResource.value()!.status || 'Desconocido' }}
           </span>
+
+          <!-- FAVORITOS -->
+          @if (authService.currentUser()) {
+
+            <button
+              class="btn btn-sm border border-pink-700 transition-colors duration-200"
+              [class.bg-pink-700]="isFavorite()"
+              [class.text-white]="isFavorite()"
+              [class.btn-outline]="!isFavorite()"
+              [class.text-pink-700]="!isFavorite()"
+              (click)="toggleFavorite()"
+            >
+
+              @if (isFavorite()) {
+                ★ Guardado en favoritos
+              } @else {
+                ☆ Agregar a favoritos
+              }
+
+            </button>
+
+          } @else {
+
+            <a
+              class="btn btn-ghost btn-sm text-pink-700 hover:text-pink-900"
+              routerLink="/auth"
+            >
+              Inicia sesión para guardar favoritos
+            </a>
+
+          }
+
         </div>
+
       </div>
+
     </article>
+
   }
+
 </section>
